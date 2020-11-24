@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var animals = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
+    
+    let layout = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        LazyVGrid(columns: layout, spacing: 20) {
+            ForEach(0...5, id: \.self) {number in
+                    Image(self.animals[number]).resizable()
+                        .frame(width: 150, height: 150)
+                        .border(Color.black)
+
+            }
+      }
     }
 }
 
