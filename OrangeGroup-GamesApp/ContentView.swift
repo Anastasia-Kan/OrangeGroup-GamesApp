@@ -21,9 +21,19 @@ struct ContentView: View {
         NavigationView{
             LazyVGrid(columns: layout, spacing: 20) {
                 ForEach(0...5, id: \.self) {number in
-                    Image(self.animals[number]).resizable()
-                        .frame(width: 150, height: 150)
-                        .border(Color.black)
+                    FlipView(
+                        {
+                            Image(self.animals[number]).resizable()
+                                .frame(width: 150, height: 150)
+                                .border(Color.black)
+                        },
+                        {
+                            Rectangle
+                                .frame(width: 150, height: 150)
+                                .background(Color.red)
+                        }
+                    )
+                    
                 }
             }
         }
