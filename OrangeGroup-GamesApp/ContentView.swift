@@ -18,19 +18,25 @@ struct ContentView: View {
     
     var body: some View {
         
-        LazyVGrid(columns: layout, spacing: 20) {
-            ForEach(0...5, id: \.self) {number in
+        NavigationView{
+            LazyVGrid(columns: layout, spacing: 20) {
+                ForEach(0...5, id: \.self) {number in
                     Image(self.animals[number]).resizable()
                         .frame(width: 150, height: 150)
                         .border(Color.black)
-
+                }
             }
-      }
+        }
+        .tabItem {
+            Image(systemName: "hare.fill")
+            Text("Spel")
+        }
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
 }
