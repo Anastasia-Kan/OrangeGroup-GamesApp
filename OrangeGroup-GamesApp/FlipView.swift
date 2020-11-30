@@ -20,7 +20,7 @@ struct FlipView<Front: View, Back: View> : View {
         GeometryReader{
             FlipContent(front: self.front, back: self.back, size: $0.size)
         }
-        .frame(height: 120.0)
+  //      .frame(height: 120.0)
     }
 }
 
