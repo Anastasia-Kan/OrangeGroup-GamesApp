@@ -19,21 +19,30 @@ struct CardSide: View {
     var body: some View {
 
         NavigationView{
-            LazyVGrid(columns: layout, spacing: 20) {
-                ForEach(0...5, id: \.self) {number in
-                    let front = Image("")
-                        .resizable()
-                        .background(Color.green)
-                        
-                        
-                    let backImg = Image(animals[number])
-                        .resizable()
-                    FlipView(front: front, back: backImg)
-                        .frame(width: size(), height: size())
-                        .border(Color.black)
-                }
+            VStack {
+                LazyVGrid(columns: layout, spacing: 20) {
+                    ForEach(0...5, id: \.self) {number in
+                        let front = Image("")
+                            .resizable()
+                            .background(Color.green)
+                            
+                            
+                        let backImg = Image(animals[number])
+                            .resizable()
+                        FlipView(front: front, back: backImg)
+                            .frame(width: size(), height: size())
+                            .border(Color.black)
+                    }
+                }.padding()
+                
+                Image(systemName: "arrowshape.turn.up.left.fill")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(.yellow)
             }
         }
+        .navigationBarTitle("Barn Memo")
+        
     }
 }
 

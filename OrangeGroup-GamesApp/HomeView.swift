@@ -9,11 +9,12 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
+        
         NavigationView{
             VStack {
                 NavigationLink(
                     destination: CardSide())
-                    {
+                  {
                     VStack {
                         Image("Dog-1")
                             .resizable()
@@ -23,7 +24,7 @@ struct HomeView: View {
                     .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .border(Color.black, width: 1)
                 }
-                        
+                
                 NavigationLink(destination: PappaMemo())
                 {
                     VStack {
@@ -50,8 +51,7 @@ struct HomeView: View {
                 }
             }
         }
-        .navigationBarTitle("Choose a game!")
-        .font(.title)
+        .navigationBarTitle("Home")
     }
 }
 
