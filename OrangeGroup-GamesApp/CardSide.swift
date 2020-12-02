@@ -38,7 +38,7 @@ struct CardSide: View {
                 Image(systemName: "arrowshape.turn.up.left.fill")
                     .resizable()
                     .frame(width: 100, height: 100)
-                    .foregroundColor(.yellow)
+                    .foregroundColor(.purple)
             }
         }
         .navigationBarTitle("Barn Memo")
