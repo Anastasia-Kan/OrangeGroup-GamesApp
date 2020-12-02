@@ -24,7 +24,8 @@ struct PappaMemo: View {
                     ForEach(0...5, id: \.self) {number in
                         let front = Image("")
                             .resizable()
-                            .background(Color.green)
+                            .background(LinearGradient(gradient: .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
+                           
                             
                             
                         let backImg = Image(animals[number])
@@ -38,7 +39,7 @@ struct PappaMemo: View {
                 Image(systemName: "arrowshape.turn.up.left.fill")
                     .resizable()
                     .frame(width: 100, height: 100)
-                    .foregroundColor(.yellow)
+                    .foregroundColor(.purple)
             }
             .navigationBarTitle("Pappa Memo")
         }

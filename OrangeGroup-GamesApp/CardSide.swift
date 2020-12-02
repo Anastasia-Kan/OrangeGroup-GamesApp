@@ -24,7 +24,7 @@ struct CardSide: View {
                     ForEach(0...5, id: \.self) {number in
                         let front = Image("")
                             .resizable()
-                            .background(Color.green)
+                            .background(LinearGradient(gradient: .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
                             
                             
                         let backImg = Image(animals[number])
