@@ -1,23 +1,22 @@
 //
-//  CardSide.swift
+//  MammaMemo.swift
 //  OrangeGroup-GamesApp
 //
-//  Created by Lina Li on 2020-11-26.
+//  Created by Lina Li on 2020-11-30.
 //
 
 import SwiftUI
 
-var animals = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
+var animalsMammaView = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
 
-let frontImg = Image("Question_mark").resizable()
-let layout = [
+let frontImgMammaView = Image("Question_mark").resizable()
+let layoutMammaiew = [
     GridItem(.flexible()),
     GridItem(.flexible())
 ]
 
-struct CardSide: View {
+struct MammaMemo: View {
     var body: some View {
-
         NavigationView{
             VStack {
                 LazyVGrid(columns: layout, spacing: 20) {
@@ -34,24 +33,22 @@ struct CardSide: View {
                             .border(Color.black)
                     }
                 }.padding()
-                
                 Image(systemName: "arrowshape.turn.up.left.fill")
                     .resizable()
                     .frame(width: 100, height: 100)
                     .foregroundColor(.yellow)
             }
         }
-        .navigationBarTitle("Barn Memo")
-        
+        .navigationBarTitle("Mamma Memo")
     }
 }
 
-func size() -> CGFloat {
+func sizeMammaView() -> CGFloat {
     return UIScreen.main.bounds.width/3
 }
 
-struct CardSide_Previews: PreviewProvider {
+struct MammaMemo_Previews: PreviewProvider {
     static var previews: some View {
-        CardSide()
+        MammaMemo()
     }
 }

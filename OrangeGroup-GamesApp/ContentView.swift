@@ -29,10 +29,6 @@ struct ContentView: View {
                 }
             }
         }
-        .tabItem {
-            Image(systemName: "hare.fill")
-            Text("Spel")
-        }
     }
     
     

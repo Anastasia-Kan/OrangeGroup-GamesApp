@@ -1,23 +1,23 @@
 //
-//  CardSide.swift
+//  PappaMemo.swift
 //  OrangeGroup-GamesApp
 //
-//  Created by Lina Li on 2020-11-26.
+//  Created by Lina Li on 2020-11-30.
 //
 
 import SwiftUI
 
-var animals = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
 
-let frontImg = Image("Question_mark").resizable()
-let layout = [
+var animalsPappaView = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
+
+let frontImgPappaView = Image("Question_mark").resizable()
+let layoutPappaView = [
     GridItem(.flexible()),
     GridItem(.flexible())
 ]
 
-struct CardSide: View {
+struct PappaMemo: View {
     var body: some View {
-
         NavigationView{
             VStack {
                 LazyVGrid(columns: layout, spacing: 20) {
@@ -40,18 +40,17 @@ struct CardSide: View {
                     .frame(width: 100, height: 100)
                     .foregroundColor(.yellow)
             }
+            .navigationBarTitle("Pappa Memo")
         }
-        .navigationBarTitle("Barn Memo")
-        
     }
 }
 
-func size() -> CGFloat {
+func sizePappaViewÅÄå() -> CGFloat {
     return UIScreen.main.bounds.width/3
 }
 
-struct CardSide_Previews: PreviewProvider {
+struct PappaMemo_Previews: PreviewProvider {
     static var previews: some View {
-        CardSide()
+        PappaMemo()
     }
 }
