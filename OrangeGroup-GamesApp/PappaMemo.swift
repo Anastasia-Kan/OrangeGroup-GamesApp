@@ -7,41 +7,43 @@
 
 import SwiftUI
 
-
-var animalsPappaView = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
-
-let frontImgPappaView = Image("Question_mark").resizable()
-let layoutPappaView = [
-    GridItem(.flexible()),
-    GridItem(.flexible())
-]
-
 struct PappaMemo: View {
+    @Environment(\.presentationMode) var presentationMode
+    
+    var animalsPappaView = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
+
+ //   let frontImgPappaView = Image("Question_mark").resizable()
+    let layoutPappaView = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
-        NavigationView{
-            VStack {
-                LazyVGrid(columns: layout, spacing: 20) {
-                    ForEach(0...5, id: \.self) {number in
-                        let front = Image("")
-                            .resizable()
-                            .background(LinearGradient(gradient: .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
-                           
-                            
-                            
-                        let backImg = Image(animals[number])
-                            .resizable()
-                        FlipView(front: front, back: backImg)
-                            .frame(width: size(), height: size())
-                            .border(Color.black)
-                    }
-                }.padding()
-                
-                Image(systemName: "arrowshape.turn.up.left.fill")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.purple)
-            }
-            .navigationBarTitle("Pappa Memo")
+        VStack {
+            LazyVGrid(columns: layoutPappaView, spacing: 20) {
+                ForEach(0...5, id: \.self) {number in
+                    let front = Image("")
+                        .resizable()
+                        .background(LinearGradient(gradient: .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
+                       
+                        
+                        
+                    let backImg = Image(animalsPappaView[number])
+                        .resizable()
+                    FlipView(front: front, back: backImg)
+                        .frame(width: size(), height: size())
+                        .border(Color.black)
+                }
+            }.padding()
+            
+            Image(systemName: "arrowshape.turn.up.left.fill")
+                .resizable()
+                .frame(width: 100, height: 100)
+                .foregroundColor(.purple)
+                .onTapGesture(perform: {
+                    print("back to start")
+                    presentationMode.wrappedValue.dismiss()
+                })
         }
     }
 }

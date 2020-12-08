@@ -7,42 +7,42 @@
 
 import SwiftUI
 
-var animals = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
-
-let frontImg = Image("Question_mark").resizable()
-let layout = [
-    GridItem(.flexible()),
-    GridItem(.flexible())
-]
-
 struct CardSide: View {
-    var body: some View {
+    @Environment(\.presentationMode) var presentationMode
+    
+    var animals = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
 
-        NavigationView{
-            VStack {
-                LazyVGrid(columns: layout, spacing: 20) {
-                    ForEach(0...5, id: \.self) {number in
-                        let front = Image("")
-                            .resizable()
-                            .background(LinearGradient(gradient: .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
-                            
-                            
-                        let backImg = Image(animals[number])
-                            .resizable()
-                        FlipView(front: front, back: backImg)
-                            .frame(width: size(), height: size())
-                            .border(Color.black)
-                    }
-                }.padding()
-                
-                Image(systemName: "arrowshape.turn.up.left.fill")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.purple)
-            }
+ //   let frontImg = Image("Question_mark").resizable()
+    let layout = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
+    var body: some View {
+        VStack {
+            LazyVGrid(columns: layout, spacing: 20) {
+                ForEach(0...5, id: \.self) {number in
+                    let front = Image("")
+                        .resizable()
+                        .background(LinearGradient(gradient: .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
+                        
+                        
+                    let backImg = Image(animals[number])
+                        .resizable()
+                    FlipView(front: front, back: backImg)
+                        .frame(width: size(), height: size())
+                        .border(Color.black)
+                }
+            }.padding()
+            Image(systemName: "arrowshape.turn.up.left.fill")
+                .resizable()
+                .frame(width: 100, height: 100)
+                .foregroundColor(.purple)
+                .onTapGesture(perform: {
+                    print("back to start")
+                    presentationMode.wrappedValue.dismiss()
+                })
         }
-        .navigationBarTitle("Barn Memo")
-        
     }
 }
 

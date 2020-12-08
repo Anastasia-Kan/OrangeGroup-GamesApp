@@ -70,14 +70,8 @@ private struct FlipContent<Front: View, Back: View>: View{
                     
                     currentState.angleTranslation = 0.0
                     animation.wrappedValue = currentState
-                }
-        )
-        
-        
-        
+                })
     }
-    
-    
 }
 
 
