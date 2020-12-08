@@ -10,7 +10,7 @@ import SwiftUI
 struct PappaMemo: View {
     @Environment(\.presentationMode) var presentationMode
     
-    var animalsPappaView = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
+    var animalsPappaView = ["Pappaglad", "Pappaglad", "Pappaarg", "Pappaarg", "Pappaledsen", "Pappaledsen"].shuffled()
 
  //   let frontImgPappaView = Image("Question_mark").resizable()
     let layoutPappaView = [

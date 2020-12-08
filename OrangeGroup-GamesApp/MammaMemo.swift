@@ -10,7 +10,7 @@ import SwiftUI
 struct MammaMemo: View {
     @Environment(\.presentationMode) var presentationMode
     
-    var animalsMammaView = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
+    var animalsMammaView = ["Mammaglad", "Mammaglad", "Mammaarg", "Mammaarg", "Mammaledsen", "Mammaledsen"].shuffled()
 
  //   let frontImgMammaView = Image("Question_mark").resizable()
     let layoutMammaiew = [
