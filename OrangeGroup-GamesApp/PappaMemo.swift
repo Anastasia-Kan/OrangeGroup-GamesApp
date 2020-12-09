@@ -19,12 +19,20 @@ struct PappaMemo: View {
     ]
     
     var body: some View {
+        
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.red, Color.purple]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        
+        
         VStack {
             LazyVGrid(columns: layoutPappaView, spacing: 20) {
                 ForEach(0...5, id: \.self) {number in
                     let front = Image("")
                         .resizable()
-                        .background(LinearGradient(gradient: .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
+                        .background(Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0))
+                        .cornerRadius(15)
+                      
                        
                         
                         
@@ -32,20 +40,21 @@ struct PappaMemo: View {
                         .resizable()
                     FlipView(front: front, back: backImg)
                         .frame(width: size(), height: size())
-                        .border(Color.black)
+                        
                 }
             }.padding()
             
             Image(systemName: "arrowshape.turn.up.left.fill")
                 .resizable()
                 .frame(width: 100, height: 100)
-                .foregroundColor(.purple)
+                .foregroundColor(.white)
                 .onTapGesture(perform: {
                     print("back to start")
                     presentationMode.wrappedValue.dismiss()
                 })
         }
     }
+}
 }
 
 func sizePappaViewÅÄå() -> CGFloat {
