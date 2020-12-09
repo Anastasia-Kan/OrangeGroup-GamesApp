@@ -26,6 +26,7 @@ struct HomeView: View {
             }
             .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .border(Color.white, width: 5)
+            .cornerRadius(10)
             .onTapGesture(perform: {
                 goChildMemo = true
                 print("Tryckt på barnmemo")
