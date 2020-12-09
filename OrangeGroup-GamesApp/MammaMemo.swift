@@ -10,7 +10,7 @@ import SwiftUI
 struct MammaMemo: View {
     @Environment(\.presentationMode) var presentationMode
     
-    var animalsMammaView = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
+    var animalsMammaView = ["Mammaglad", "Mammaarg", "Mammaledsen", "Mammaglad", "Mammaarg", "Mammaledsen"].shuffled()
 
  //   let frontImgMammaView = Image("Question_mark").resizable()
     let layoutMammaiew = [
@@ -18,13 +18,16 @@ struct MammaMemo: View {
         GridItem(.flexible())
     ]
     
+    
     var body: some View {
         VStack {
             LazyVGrid(columns: layoutMammaiew, spacing: 20) {
                 ForEach(0...5, id: \.self) {number in
                     let front = Image("")
                         .resizable()
-                        .background(LinearGradient(gradient: .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
+                        .background(LinearGradient(gradient:
+                        .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
+                       
                         
                         
                     let backImg = Image(animalsMammaView[number])

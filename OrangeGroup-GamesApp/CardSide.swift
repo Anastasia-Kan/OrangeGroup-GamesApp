@@ -10,7 +10,7 @@ import SwiftUI
 struct CardSide: View {
     @Environment(\.presentationMode) var presentationMode
     
-    var animals = ["Dog-1", "Dog-2", "Kitten-1", "Kitten-2", "Lion-1", "Elefant-1"].shuffled()
+    var animals = ["mammaglad", "Mammaarg", "Mammaledsen", "Mammaglad", "mammaarg", "Mammaledsen"].shuffled()
 
  //   let frontImg = Image("Question_mark").resizable()
     let layout = [

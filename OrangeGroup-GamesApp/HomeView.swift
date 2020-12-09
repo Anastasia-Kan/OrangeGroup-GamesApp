@@ -15,25 +15,29 @@ struct HomeView: View {
     
     var body: some View {
         
+        
         VStack {
             VStack {
-                Image("Dog-1")
+                Image("Pojkeglad")
                     .resizable()
                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 Text("Barn Memo")
+                    
             }
             .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            .border(Color.black, width: 1)
+            .border(Color.white, width: 5)
             .onTapGesture(perform: {
                 goChildMemo = true
                 print("Tryckt på barnmemo")
             })
             .fullScreenCover(isPresented: $goChildMemo, content: {
                         CardSide()
+                        
                     })
+          
             
             VStack {
-                Image("Elefant-1")
+                Image("Pappaglad")
                     .resizable()
                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 Text("Pappa Memo")
@@ -49,7 +53,7 @@ struct HomeView: View {
                     })
                 
             VStack {
-                Image("Lion-1")
+                Image("Mammaglad")
                     .resizable()
                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 Text("Mamma Memo")
