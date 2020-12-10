@@ -11,7 +11,7 @@
 		9EC18B09257558DC0060BA30 /* PappaMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC18B08257558DC0060BA30 /* PappaMemo.swift */; };
 		9EC18B0C257558ED0060BA30 /* MammaMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC18B0B257558ED0060BA30 /* MammaMemo.swift */; };
 		9EEC6B5825701934009E1576 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC6B5725701934009E1576 /* FlipView.swift */; };
-		9EEC6B5B25703200009E1576 /* CardSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC6B5A25703200009E1576 /* CardSide.swift */; };
+		9EEC6B5B25703200009E1576 /* BarnMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC6B5A25703200009E1576 /* BarnMemo.swift */; };
 		F3A6DE7F256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6DE7E256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift */; };
 		F3A6DE81256D0B2D009E6C36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6DE80256D0B2D009E6C36 /* ContentView.swift */; };
 		F3A6DE83256D0B32009E6C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6DE82256D0B32009E6C36 /* Assets.xcassets */; };
@@ -23,7 +23,7 @@
 		9EC18B08257558DC0060BA30 /* PappaMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PappaMemo.swift; sourceTree = "<group>"; };
 		9EC18B0B257558ED0060BA30 /* MammaMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MammaMemo.swift; sourceTree = "<group>"; };
 		9EEC6B5725701934009E1576 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
-		9EEC6B5A25703200009E1576 /* CardSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSide.swift; sourceTree = "<group>"; };
+		9EEC6B5A25703200009E1576 /* BarnMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarnMemo.swift; sourceTree = "<group>"; };
 		F3A6DE7B256D0B2D009E6C36 /* OrangeGroup-GamesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OrangeGroup-GamesApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A6DE7E256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeGroup_GamesAppApp.swift; sourceTree = "<group>"; };
 		F3A6DE80256D0B2D009E6C36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				9EC18B0B257558ED0060BA30 /* MammaMemo.swift */,
 				F3A6DE80256D0B2D009E6C36 /* ContentView.swift */,
 				9EEC6B5725701934009E1576 /* FlipView.swift */,
-				9EEC6B5A25703200009E1576 /* CardSide.swift */,
+				9EEC6B5A25703200009E1576 /* BarnMemo.swift */,
 				F3A6DE87256D0B32009E6C36 /* Info.plist */,
 				F3A6DE82256D0B32009E6C36 /* Assets.xcassets */,
 				F3A6DE84256D0B32009E6C36 /* Preview Content */,
@@ -154,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EC18B0C257558ED0060BA30 /* MammaMemo.swift in Sources */,
-				9EEC6B5B25703200009E1576 /* CardSide.swift in Sources */,
+				9EEC6B5B25703200009E1576 /* BarnMemo.swift in Sources */,
 				F3A6DE81256D0B2D009E6C36 /* ContentView.swift in Sources */,
 				9EEC6B5825701934009E1576 /* FlipView.swift in Sources */,
 				9EC18B04257557F10060BA30 /* HomeView.swift in Sources */,
