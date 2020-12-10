@@ -30,7 +30,7 @@ struct MammaMemo: View {
                 ForEach(0...5, id: \.self) {number in
                     let front = Image("")
                         .resizable()
-                        .background(Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0))
+                        .background(Color.init(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
                         
                        
                         
@@ -38,8 +38,8 @@ struct MammaMemo: View {
                     let backImg = Image(animalsMammaView[number])
                         .resizable()
                     FlipView(front: front, back: backImg)
-                        .frame(width: size(), height: size())
-                        .border(Color.black)
+                        .frame(width: 150, height: 150)
+                        .cornerRadius(15)
                 }
             }.padding()
             Image(systemName: "arrowshape.turn.up.left.fill")
