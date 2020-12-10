@@ -20,13 +20,18 @@ struct MammaMemo: View {
     
     
     var body: some View {
+        
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.red, Color.purple]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
+        
         VStack {
             LazyVGrid(columns: layoutMammaiew, spacing: 20) {
                 ForEach(0...5, id: \.self) {number in
                     let front = Image("")
                         .resizable()
-                        .background(LinearGradient(gradient:
-                        .init(colors: [.red, .purple]), startPoint: .bottom, endPoint: .top))
+                        .background(Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0))
+                        
                        
                         
                         
@@ -40,7 +45,7 @@ struct MammaMemo: View {
             Image(systemName: "arrowshape.turn.up.left.fill")
                 .resizable()
                 .frame(width: 100, height: 100)
-                .foregroundColor(.purple)
+                .foregroundColor(.white)
                 .onTapGesture(perform: {
                     print("back to start")
                     presentationMode.wrappedValue.dismiss()
@@ -57,4 +62,5 @@ struct MammaMemo_Previews: PreviewProvider {
     static var previews: some View {
         MammaMemo()
     }
+}
 }

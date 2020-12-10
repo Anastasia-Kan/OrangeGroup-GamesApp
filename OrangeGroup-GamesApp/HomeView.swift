@@ -82,6 +82,8 @@ struct HomeView: View {
             .padding()
             .background(Color.white)
             .cornerRadius(15)
+            .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 3, x: 0.9, y: 0.9)
+            
             
         }.onAppear() {
             goChildMemo = false

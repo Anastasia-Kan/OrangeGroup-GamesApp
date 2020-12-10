@@ -31,7 +31,7 @@ struct PappaMemo: View {
                     let front = Image("")
                         .resizable()
                         .background(Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0))
-                        .cornerRadius(15)
+                       
                       
                        
                         
