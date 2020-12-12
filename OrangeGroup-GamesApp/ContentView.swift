@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var animals = ["Pojkearg", "Pojkeglad", "Pojkeledsen", "Pojkearg", "Pojkeglad", "Elefant-1"].shuffled()
+    var animals = ["Pojkearg", "Pojkeglad", "Pojkeledsen", "Pojkearg", "Pojkeglad", "Pojkeledsen"].shuffled()
     
     let layout = [
         GridItem(.flexible()),

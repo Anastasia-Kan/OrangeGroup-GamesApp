@@ -21,8 +21,8 @@ struct PappaMemo: View {
     var body: some View {
         
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.red, Color.purple]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            LinearGradient(gradient: Gradient(colors: [Color.init(red: 238/255, green: 11/255, blue: 11/255, opacity: 1.0), Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0)]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
         
         
         VStack {
@@ -30,8 +30,9 @@ struct PappaMemo: View {
                 ForEach(0...5, id: \.self) {number in
                     let front = Image("")
                         .resizable()
-                        .background(Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0))
-                        .cornerRadius(15)
+                        .background(Color.init(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
+                        
+                       
                       
                        
                         
@@ -39,7 +40,8 @@ struct PappaMemo: View {
                     let backImg = Image(animalsPappaView[number])
                         .resizable()
                     FlipView(front: front, back: backImg)
-                        .frame(width: size(), height: size())
+                        .frame(width: 150, height: 150)
+                        .cornerRadius(15)
                         
                 }
             }.padding()

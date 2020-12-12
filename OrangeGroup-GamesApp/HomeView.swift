@@ -17,8 +17,8 @@ struct HomeView: View {
         
         ZStack {
                     
-            LinearGradient(gradient: Gradient(colors: [Color.red, Color.purple]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            LinearGradient(gradient: Gradient(colors: [Color.init(red: 238/255, green: 11/255, blue: 11/255, opacity: 1.0), Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0)]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
 
         VStack {
             VStack {
@@ -82,6 +82,8 @@ struct HomeView: View {
             .padding()
             .background(Color.white)
             .cornerRadius(15)
+            .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 3, x: 0.9, y: 0.9)
+            
             
         }.onAppear() {
             goChildMemo = false
