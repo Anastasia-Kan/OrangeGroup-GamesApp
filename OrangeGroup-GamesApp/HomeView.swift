@@ -41,7 +41,6 @@ struct HomeView: View {
             .padding()
             .background(Color.white)
             .cornerRadius(15)
-          
             
             VStack {
                 Image("Pappaglad")
@@ -49,11 +48,14 @@ struct HomeView: View {
                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 Text("Pappa Memo")
             }
+            
             .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .onTapGesture(perform: {
                 goDadMemo = true
                 print("Tryckt på pappamemo")
+                    
             })
+            
             .fullScreenCover(isPresented: $goDadMemo, content: {
                         PappaMemo()
                     })
@@ -61,7 +63,8 @@ struct HomeView: View {
             .padding()
             .background(Color.white)
             .cornerRadius(15)
-                
+        
+            
             VStack {
                 Image("Mammaglad")
                     .resizable()
@@ -82,7 +85,6 @@ struct HomeView: View {
             .padding()
             .background(Color.white)
             .cornerRadius(15)
-            .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 3, x: 0.9, y: 0.9)
             
             
         }.onAppear() {
@@ -90,7 +92,8 @@ struct HomeView: View {
             goDadMemo = false
             goMomMemo = false
         }
-        
+        .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
+       
             
     }
         

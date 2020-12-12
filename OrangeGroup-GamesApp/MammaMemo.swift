@@ -28,9 +28,12 @@ struct MammaMemo: View {
         VStack {
             LazyVGrid(columns: layoutMammaiew, spacing: 20) {
                 ForEach(0...5, id: \.self) {number in
-                    let front = Image("")
+                    let front = Image(systemName: "sun.max")
                         .resizable()
+                        .foregroundColor(.init(red: 237/255, green: 216/255, blue: 168/255))
                         .background(Color.init(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
+                       
+                    
                         
                        
                         
@@ -40,7 +43,10 @@ struct MammaMemo: View {
                     FlipView(front: front, back: backImg)
                         .frame(width: 150, height: 150)
                         .cornerRadius(15)
+                        
                 }
+                .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
+                
             }.padding()
             Image(systemName: "arrowshape.turn.up.left.fill")
                 .resizable()
@@ -49,7 +55,9 @@ struct MammaMemo: View {
                 .onTapGesture(perform: {
                     print("back to start")
                     presentationMode.wrappedValue.dismiss()
+                    
                 })
+                .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
         }
     }
 }
