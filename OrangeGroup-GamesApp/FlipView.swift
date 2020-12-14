@@ -10,15 +10,17 @@ import SwiftUI
 struct FlipView<Front: View, Back: View> : View {
     let front: Front
     let back: Back
+    let sound: String
     
-    init(front: Front, back: Back) {
-       self.front = front
-       self.back = back
+    init(front: Front, back: Back, sound: String) {
+        self.front = front
+        self.back = back
+        self.sound = sound
     }
 
     var body: some View {
         GeometryReader{
-            FlipContent(front: self.front, back: self.back, size: $0.size)
+            FlipContent(front: self.front, back: self.back, size: $0.size, sound: sound)
         }
   //      .frame(height: 120.0)
     }
@@ -28,6 +30,7 @@ private struct FlipContent<Front: View, Back: View>: View{
     let front: Front
     let back: Back
     let size: CGSize
+    let sound: String
     
     @State var angleState = TranslatingAngleState()
     
@@ -50,7 +53,8 @@ private struct FlipContent<Front: View, Back: View>: View{
             withAnimation{
                 self.angleState = currentState
             }
-            EffectPlayer.shared.effectSound(effect: "Kid-cry")
+            if !angleState.showingFront {
+                EffectPlayer.shared.effectSound(effect: sound)}
         }
     }
 }

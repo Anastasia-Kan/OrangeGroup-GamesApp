@@ -10,7 +10,7 @@ import SwiftUI
 struct MammaMemo: View {
     @Environment(\.presentationMode) var presentationMode
     
-    var animalsMammaView = ["Mammaglad", "Mammaarg", "Mammaledsen", "Mammaglad", "Mammaarg", "Mammaledsen"].shuffled()
+    var momFaces = ["Mammaglad", "Mammaarg", "Mammaledsen", "Mammaglad", "Mammaarg", "Mammaledsen"].shuffled()
 
  //   let frontImgMammaView = Image("Question_mark").resizable()
     let layoutMammaiew = [
@@ -33,14 +33,9 @@ struct MammaMemo: View {
                         .foregroundColor(.init(red: 237/255, green: 216/255, blue: 168/255))
                         .background(Color.init(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
                        
-                    
-                        
-                       
-                        
-                        
-                    let backImg = Image(animalsMammaView[number])
+                    let backImg = Image(momFaces[number])
                         .resizable()
-                    FlipView(front: front, back: backImg)
+                    FlipView(front: front, back: backImg, sound: getSound(number: number))
                         .frame(width: 150, height: 150)
                         .cornerRadius(15)
                         
@@ -62,9 +57,21 @@ struct MammaMemo: View {
     }
 }
 
-func sizeMammaView() -> CGFloat {
-    return UIScreen.main.bounds.width/3
-}
+    func sizeMammaView() -> CGFloat {
+        return UIScreen.main.bounds.width/3
+    }
+    
+    func getSound(number: Int) -> String {
+        let emotion = momFaces[number]
+        if emotion == "Mammaglad" {
+            return "Woman-laugh"
+        } else if emotion == "Mammaledsen" {
+            return "Woman-cry"
+        } else {
+            return "Woman-angry"
+        }
+        
+    }
 
 struct MammaMemo_Previews: PreviewProvider {
     static var previews: some View {

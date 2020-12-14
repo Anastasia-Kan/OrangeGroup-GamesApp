@@ -19,7 +19,7 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView{
-            LazyVGrid(columns: layout, spacing: 20) {
+            LazyVGrid(columns: layout, spacing: 1) {
                 ForEach(0...5, id: \.self) {number in
                     
                     Image(self.animals[number]).resizable()

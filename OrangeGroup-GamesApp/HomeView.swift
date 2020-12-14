@@ -34,7 +34,7 @@ struct HomeView: View {
                 print("Tryckt på barnmemo")
             })
             .fullScreenCover(isPresented: $goChildMemo, content: {
-                        CardSide()
+                        BarnMemo()
                         
                     })
             

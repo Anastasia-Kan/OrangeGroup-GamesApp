@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B4914F52587D58F00BDAC93 /* Kid-angry.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B4914F42587D58F00BDAC93 /* Kid-angry.wav */; };
+		7B4914F82587D66600BDAC93 /* Man-cry.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B4914F72587D66600BDAC93 /* Man-cry.wav */; };
+		7B4914FB2587D6B500BDAC93 /* Man-angry.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B4914FA2587D6B500BDAC93 /* Man-angry.wav */; };
+		7B4914FE2587D6F400BDAC93 /* Man-laugh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B4914FD2587D6F400BDAC93 /* Man-laugh.wav */; };
+		7B4915042587D7C800BDAC93 /* Woman-angry.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B4915032587D7C800BDAC93 /* Woman-angry.wav */; };
+		7B4915072587D80D00BDAC93 /* Woman-laugh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B4915062587D80D00BDAC93 /* Woman-laugh.wav */; };
+		7B49150B2587F55F00BDAC93 /* Woman-cry.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B49150A2587F55F00BDAC93 /* Woman-cry.wav */; };
 		7BFF693625868F36000F84D5 /* EffectPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF693525868F36000F84D5 /* EffectPlayer.swift */; };
 		9EC18B04257557F10060BA30 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC18B03257557F10060BA30 /* HomeView.swift */; };
 		9EC18B09257558DC0060BA30 /* PappaMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC18B08257558DC0060BA30 /* PappaMemo.swift */; };
@@ -22,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B4914F42587D58F00BDAC93 /* Kid-angry.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Kid-angry.wav"; sourceTree = "<group>"; };
+		7B4914F72587D66600BDAC93 /* Man-cry.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Man-cry.wav"; sourceTree = "<group>"; };
+		7B4914FA2587D6B500BDAC93 /* Man-angry.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Man-angry.wav"; sourceTree = "<group>"; };
+		7B4914FD2587D6F400BDAC93 /* Man-laugh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Man-laugh.wav"; sourceTree = "<group>"; };
+		7B4915032587D7C800BDAC93 /* Woman-angry.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Woman-angry.wav"; sourceTree = "<group>"; };
+		7B4915062587D80D00BDAC93 /* Woman-laugh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Woman-laugh.wav"; sourceTree = "<group>"; };
+		7B49150A2587F55F00BDAC93 /* Woman-cry.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Woman-cry.wav"; sourceTree = "<group>"; };
 		7BFF693525868F36000F84D5 /* EffectPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectPlayer.swift; sourceTree = "<group>"; };
 		9EC18B03257557F10060BA30 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9EC18B08257558DC0060BA30 /* PappaMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PappaMemo.swift; sourceTree = "<group>"; };
@@ -96,7 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				F3BD24D825838AE1003147D2 /* Kid-cry.wav */,
+				7B4914F42587D58F00BDAC93 /* Kid-angry.wav */,
 				F3BD24DA25838AE1003147D2 /* Kid-laugh.wav */,
+				7B4914F72587D66600BDAC93 /* Man-cry.wav */,
+				7B4914FA2587D6B500BDAC93 /* Man-angry.wav */,
+				7B4914FD2587D6F400BDAC93 /* Man-laugh.wav */,
+				7B49150A2587F55F00BDAC93 /* Woman-cry.wav */,
+				7B4915032587D7C800BDAC93 /* Woman-angry.wav */,
+				7B4915062587D80D00BDAC93 /* Woman-laugh.wav */,
 			);
 			path = "Sound Effects";
 			sourceTree = "<group>";
@@ -158,10 +179,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4915042587D7C800BDAC93 /* Woman-angry.wav in Resources */,
 				F3BD24E325838AE1003147D2 /* Kid-laugh.wav in Resources */,
 				F3A6DE86256D0B32009E6C36 /* Preview Assets.xcassets in Resources */,
+				7B4914FB2587D6B500BDAC93 /* Man-angry.wav in Resources */,
+				7B4914FE2587D6F400BDAC93 /* Man-laugh.wav in Resources */,
+				7B49150B2587F55F00BDAC93 /* Woman-cry.wav in Resources */,
+				7B4914F82587D66600BDAC93 /* Man-cry.wav in Resources */,
+				7B4915072587D80D00BDAC93 /* Woman-laugh.wav in Resources */,
 				F3BD24E125838AE1003147D2 /* Kid-cry.wav in Resources */,
 				F3A6DE83256D0B32009E6C36 /* Assets.xcassets in Resources */,
+				7B4914F52587D58F00BDAC93 /* Kid-angry.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
