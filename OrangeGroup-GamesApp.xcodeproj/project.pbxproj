@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BFF693625868F36000F84D5 /* EffectPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF693525868F36000F84D5 /* EffectPlayer.swift */; };
 		9EC18B04257557F10060BA30 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC18B03257557F10060BA30 /* HomeView.swift */; };
 		9EC18B09257558DC0060BA30 /* PappaMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC18B08257558DC0060BA30 /* PappaMemo.swift */; };
 		9EC18B0C257558ED0060BA30 /* MammaMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC18B0B257558ED0060BA30 /* MammaMemo.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7BFF693525868F36000F84D5 /* EffectPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectPlayer.swift; sourceTree = "<group>"; };
 		9EC18B03257557F10060BA30 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9EC18B08257558DC0060BA30 /* PappaMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PappaMemo.swift; sourceTree = "<group>"; };
 		9EC18B0B257558ED0060BA30 /* MammaMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MammaMemo.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				F3A6DE80256D0B2D009E6C36 /* ContentView.swift */,
 				9EEC6B5725701934009E1576 /* FlipView.swift */,
 				9EEC6B5A25703200009E1576 /* BarnMemo.swift */,
+				7BFF693525868F36000F84D5 /* EffectPlayer.swift */,
 				F3A6DE87256D0B32009E6C36 /* Info.plist */,
 				F3A6DE82256D0B32009E6C36 /* Assets.xcassets */,
 				F3A6DE84256D0B32009E6C36 /* Preview Content */,
@@ -176,6 +179,7 @@
 				9EC18B04257557F10060BA30 /* HomeView.swift in Sources */,
 				9EC18B09257558DC0060BA30 /* PappaMemo.swift in Sources */,
 				F3A6DE7F256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift in Sources */,
+				7BFF693625868F36000F84D5 /* EffectPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

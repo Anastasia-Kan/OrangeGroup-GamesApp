@@ -50,6 +50,7 @@ private struct FlipContent<Front: View, Back: View>: View{
             withAnimation{
                 self.angleState = currentState
             }
+            EffectPlayer.shared.effectSound(effect: "Kid-cry")
         }
     }
 }
