@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var animals = ["Pojkearg", "Pojkeglad", "Pojkeledsen", "Pojkearg", "Pojkeglad", "Pojkeledsen"].shuffled()
+    var faces = ["Pojkearg", "Pojkeglad", "Pojkeledsen", "Pojkearg", "Pojkeglad", "Pojkeledsen"].shuffled()
     
     let layout = [
         GridItem(.flexible()),
@@ -22,7 +22,7 @@ struct ContentView: View {
             LazyVGrid(columns: layout, spacing: 1) {
                 ForEach(0...5, id: \.self) {number in
                     
-                    Image(self.animals[number]).resizable()
+                    Image(self.faces[number]).resizable()
                         .frame(width: 150, height: 150)
                         .border(Color.black)
                     

@@ -12,6 +12,7 @@ struct FlipView<Front: View, Back: View> : View {
     let back: Back
     let sound: String
     
+    
     init(front: Front, back: Back, sound: String) {
         self.front = front
         self.back = back
@@ -22,7 +23,6 @@ struct FlipView<Front: View, Back: View> : View {
         GeometryReader{
             FlipContent(front: self.front, back: self.back, size: $0.size, sound: sound)
         }
-  //      .frame(height: 120.0)
     }
 }
 

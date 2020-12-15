@@ -12,7 +12,6 @@ struct PappaMemo: View {
     
     var dadFaces = ["Pappaarg", "Pappaglad", "Pappaledsen", "Pappaarg", "Pappaglad", "Pappaledsen"].shuffled()
 
- //   let frontImgPappaView = Image("Question_mark").resizable()
     let layoutPappaView = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -38,7 +37,6 @@ struct PappaMemo: View {
                     FlipView(front: front, back: backImg, sound: getSound(number: number))
                         .frame(width: 150, height: 150)
                         .cornerRadius(15)
-                        
                 }
                 .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
                 
@@ -58,7 +56,7 @@ struct PappaMemo: View {
 }
 
 
-func sizePappaViewÅÄå() -> CGFloat {
+func sizePappaView() -> CGFloat {
     return UIScreen.main.bounds.width/3
 }
 
