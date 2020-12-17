@@ -47,11 +47,14 @@ private struct FlipContent<Front: View, Back: View>: View{
             .degrees(angleState.total),
             axis: (x: 0.0, y: 1.0, z: 0.0),perspective: 0.5)
         .onTapGesture {
+            
+            //var indexState
+            
             var currentState = self.angleState
             currentState.angle -= 180.0
             currentState.angleTranslation = 0.0
             withAnimation{
-                self.angleState = currentState
+            self.angleState = currentState
             }
             if !angleState.showingFront {
                 EffectPlayer.shared.effectSound(effect: sound)}

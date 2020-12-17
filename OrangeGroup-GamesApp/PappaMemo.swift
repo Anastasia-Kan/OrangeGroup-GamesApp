@@ -34,6 +34,8 @@ struct PappaMemo: View {
                         
                     let backImg = Image(dadFaces[number])
                         .resizable()
+                    
+                    
                     FlipView(front: front, back: backImg, sound: getSound(number: number))
                         .frame(width: 150, height: 150)
                         .cornerRadius(15)
@@ -69,7 +71,7 @@ func getSound(number: Int) -> String {
     } else {
         return "Man-angry"
     }
-}
+    }
 }
 
 struct PappaMemo_Previews: PreviewProvider {
