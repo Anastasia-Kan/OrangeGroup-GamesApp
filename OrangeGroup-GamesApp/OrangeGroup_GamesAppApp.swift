@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct OrangeGroup_GamesAppApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
             HomeView()
