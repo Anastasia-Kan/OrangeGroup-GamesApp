@@ -11,6 +11,8 @@ struct BarnMemo: View {
     @Environment(\.presentationMode) var presentationMode
     
     var faces = ["Pojkeglad", "Pojkearg", "Pojkeledsen", "Pojkeglad", "Pojkearg", "Pojkeledsen"].shuffled()
+    
+    
     let layout = [
         GridItem(.flexible()),
         GridItem(.flexible())

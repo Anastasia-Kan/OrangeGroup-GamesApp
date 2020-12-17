@@ -8,28 +8,41 @@
 import Foundation
 import SwiftUI
 
-class Card: Identifiable {
+class Card: NSObject, Identifiable {
     
-    var id: String
+    var id: String = ""
+    var facename = ""
     var shown: Bool = false
     var isMatched: Bool = false
     
-    static var cards = [Card]()
+    //static var cards = [Card]()
     
+    /*
     init(card: Card) {
         self.id = NSUUID().uuidString
         self.shown = false
     }
+    */
     
     func equals(_ card: Card) -> Bool {
         return (card.id == id)
     }
 }
 
-class MemoryGame {
-    var cards: [Card] = [Card]()
+class MemoryGame : NSObject, ObservableObject {
+    @State var cards: [Card] = [Card]()
     var cardsShown: [Card] = [Card]()
     var isPlaying: Bool = false
+    
+    func setupGame(faces : [String])
+    {
+        for face in faces {
+            var tempcard = Card()
+            tempcard.id = UUID().uuidString
+            tempcard.facename = face
+            cards.append(tempcard)
+        }
+    }
     
     func shuffleCards(cards: [Card]) -> [Card] {
         var randomCards = cards
