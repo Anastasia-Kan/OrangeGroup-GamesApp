@@ -6,20 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct OrangeGroup_GamesAppApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
             HomeView()
-//            CardSide()
-            
-      /*      TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-                ContentView()
-                ContentView()
-                ContentView()
-            }
-        */
         }
     }
 }

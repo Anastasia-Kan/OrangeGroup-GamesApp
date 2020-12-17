@@ -34,7 +34,7 @@ struct HomeView: View {
                 print("Tryckt på barnmemo")
             })
             .fullScreenCover(isPresented: $goChildMemo, content: {
-                        CardSide()
+                        BarnMemo()
                         
                     })
             
@@ -94,10 +94,8 @@ struct HomeView: View {
         }
         .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
        
-            
+        }
     }
-        
-}
 }
 
 

@@ -10,9 +10,8 @@ import SwiftUI
 struct PappaMemo: View {
     @Environment(\.presentationMode) var presentationMode
     
-    var animalsPappaView = ["Pappaarg", "Pappaglad", "Pappaledsen", "Pappaarg", "Pappaglad", "Pappaledsen"].shuffled()
+    var dadFaces = ["Pappaarg", "Pappaglad", "Pappaledsen", "Pappaarg", "Pappaglad", "Pappaledsen"].shuffled()
 
- //   let frontImgPappaView = Image("Question_mark").resizable()
     let layoutPappaView = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -33,17 +32,11 @@ struct PappaMemo: View {
                         .foregroundColor(.init(red: 213/255, green: 196/255, blue: 218/255))
                         .background(Color.init(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
                         
-                       
-                      
-                       
-                        
-                        
-                    let backImg = Image(animalsPappaView[number])
+                    let backImg = Image(dadFaces[number])
                         .resizable()
-                    FlipView(front: front, back: backImg)
+                    FlipView(front: front, back: backImg, sound: getSound(number: number))
                         .frame(width: 150, height: 150)
                         .cornerRadius(15)
-                        
                 }
                 .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
                 
@@ -61,10 +54,22 @@ struct PappaMemo: View {
         }
     }
 }
+
+
+func sizePappaView() -> CGFloat {
+    return UIScreen.main.bounds.width/3
 }
 
-func sizePappaViewÅÄå() -> CGFloat {
-    return UIScreen.main.bounds.width/3
+func getSound(number: Int) -> String {
+    let emotion = dadFaces[number]
+    if emotion == "Pappaglad" {
+        return "Man-laugh"
+    } else if emotion == "Pappaledsen" {
+        return "Man-cry"
+    } else {
+        return "Man-angry"
+    }
+}
 }
 
 struct PappaMemo_Previews: PreviewProvider {
