@@ -1,0 +1,6 @@
+framework module Pods_OrangeGroup_GamesApp {
+  umbrella header "Pods-OrangeGroup-GamesApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
