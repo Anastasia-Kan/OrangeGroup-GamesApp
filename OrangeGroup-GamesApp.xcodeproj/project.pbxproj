@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -86,7 +86,6 @@
 				4809EA4B7E2BDF6EA1FC49C8 /* Pods-OrangeGroup-GamesApp.debug.xcconfig */,
 				B0EA36D6D13E6A0C53874F7B /* Pods-OrangeGroup-GamesApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

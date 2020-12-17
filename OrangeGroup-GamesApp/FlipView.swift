@@ -12,6 +12,8 @@ struct FlipView<Front: View, Back: View> : View {
     let back: Back
     let sound: String
     
+    var flipDone = {}
+    
     
     init(front: Front, back: Back, sound: String) {
         self.front = front
@@ -21,7 +23,7 @@ struct FlipView<Front: View, Back: View> : View {
 
     var body: some View {
         GeometryReader{
-            FlipContent(front: self.front, back: self.back, size: $0.size, sound: sound)
+            FlipContent(front: self.front, back: self.back, size: $0.size, sound: sound, flipDone: flipDone)
         }
     }
 }
@@ -33,6 +35,11 @@ private struct FlipContent<Front: View, Back: View>: View{
     let sound: String
     
     @State var angleState = TranslatingAngleState()
+    
+    @State var isFlipped = false
+    
+    var flipDone = {}
+    
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -47,17 +54,21 @@ private struct FlipContent<Front: View, Back: View>: View{
             .degrees(angleState.total),
             axis: (x: 0.0, y: 1.0, z: 0.0),perspective: 0.5)
         .onTapGesture {
-            
-            //var indexState
-            
-            var currentState = self.angleState
-            currentState.angle -= 180.0
-            currentState.angleTranslation = 0.0
-            withAnimation{
-            self.angleState = currentState
+            if(isFlipped == false)
+            {
+                isFlipped = true
+                var currentState = self.angleState
+                currentState.angle -= 180.0
+                currentState.angleTranslation = 0.0
+                withAnimation{
+                    self.angleState = currentState
+                }
+                if !angleState.showingFront {
+                    EffectPlayer.shared.effectSound(effect: sound)}
+                
+                flipDone()
             }
-            if !angleState.showingFront {
-                EffectPlayer.shared.effectSound(effect: sound)}
+            
         }
     }
 }
