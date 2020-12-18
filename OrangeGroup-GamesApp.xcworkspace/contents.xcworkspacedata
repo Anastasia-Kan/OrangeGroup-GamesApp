@@ -7,4 +7,20 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:OrangeGroup-GamesApp/../Old unused files"
+      name = "Old unused files">
+      <FileRef
+         location = "group:Old unused files/FlipView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Old unused files/PappaMemo.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Old unused files/MammaMemo.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Old unused files/BarnMemo.swift">
+      </FileRef>
+   </Group>
 </Workspace>

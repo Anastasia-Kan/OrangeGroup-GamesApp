@@ -23,12 +23,13 @@
 		9EEC6B5825701934009E1576 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC6B5725701934009E1576 /* FlipView.swift */; };
 		9EEC6B5B25703200009E1576 /* BarnMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC6B5A25703200009E1576 /* BarnMemo.swift */; };
 		F3A6DE7F256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6DE7E256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift */; };
-		F3A6DE81256D0B2D009E6C36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6DE80256D0B2D009E6C36 /* ContentView.swift */; };
+		F3A6DE81256D0B2D009E6C36 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6DE80256D0B2D009E6C36 /* GameView.swift */; };
 		F3A6DE83256D0B32009E6C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6DE82256D0B32009E6C36 /* Assets.xcassets */; };
 		F3A6DE86256D0B32009E6C36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6DE85256D0B32009E6C36 /* Preview Assets.xcassets */; };
 		F3BD24E125838AE1003147D2 /* Kid-cry.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3BD24D825838AE1003147D2 /* Kid-cry.wav */; };
 		F3BD24E325838AE1003147D2 /* Kid-laugh.wav in Resources */ = {isa = PBXBuildFile; fileRef = F3BD24DA25838AE1003147D2 /* Kid-laugh.wav */; };
-		F3E949432588C98300A03784 /* MatchingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E949422588C98300A03784 /* MatchingCode.swift */; };
+		F3C7D851258D4A9900A9274A /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7D850258D4A9900A9274A /* GameController.swift */; };
+		F3E949432588C98300A03784 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E949422588C98300A03784 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,13 +52,14 @@
 		B0EA36D6D13E6A0C53874F7B /* Pods-OrangeGroup-GamesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrangeGroup-GamesApp.release.xcconfig"; path = "Target Support Files/Pods-OrangeGroup-GamesApp/Pods-OrangeGroup-GamesApp.release.xcconfig"; sourceTree = "<group>"; };
 		F3A6DE7B256D0B2D009E6C36 /* OrangeGroup-GamesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OrangeGroup-GamesApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A6DE7E256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeGroup_GamesAppApp.swift; sourceTree = "<group>"; };
-		F3A6DE80256D0B2D009E6C36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F3A6DE80256D0B2D009E6C36 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		F3A6DE82256D0B32009E6C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3A6DE85256D0B32009E6C36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F3A6DE87256D0B32009E6C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3BD24D825838AE1003147D2 /* Kid-cry.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Kid-cry.wav"; sourceTree = "<group>"; };
 		F3BD24DA25838AE1003147D2 /* Kid-laugh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Kid-laugh.wav"; sourceTree = "<group>"; };
-		F3E949422588C98300A03784 /* MatchingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingCode.swift; sourceTree = "<group>"; };
+		F3C7D850258D4A9900A9274A /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		F3E949422588C98300A03784 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,17 +114,15 @@
 			isa = PBXGroup;
 			children = (
 				F3A6DE7E256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift */,
-				9E225B3C258A14F100BF2D58 /* GoogleService-Info.plist */,
 				9EC18B03257557F10060BA30 /* HomeView.swift */,
-				9EC18B08257558DC0060BA30 /* PappaMemo.swift */,
-				9EC18B0B257558ED0060BA30 /* MammaMemo.swift */,
-				9EEC6B5A25703200009E1576 /* BarnMemo.swift */,
-				F3A6DE80256D0B2D009E6C36 /* ContentView.swift */,
-				9EEC6B5725701934009E1576 /* FlipView.swift */,
+				F3A6DE80256D0B2D009E6C36 /* GameView.swift */,
+				F3E949422588C98300A03784 /* CardView.swift */,
+				F3C7D850258D4A9900A9274A /* GameController.swift */,
 				7BFF693525868F36000F84D5 /* EffectPlayer.swift */,
-				F3E949422588C98300A03784 /* MatchingCode.swift */,
+				F3C7D854258D518200A9274A /* Old unused files */,
 				F3A6DE7C256D0B2D009E6C36 /* Products */,
 				F3A6DE87256D0B32009E6C36 /* Info.plist */,
+				9E225B3C258A14F100BF2D58 /* GoogleService-Info.plist */,
 				F3A6DE82256D0B32009E6C36 /* Assets.xcassets */,
 				F3A6DE84256D0B32009E6C36 /* Preview Content */,
 			);
@@ -151,6 +151,18 @@
 				7B4915062587D80D00BDAC93 /* Woman-laugh.wav */,
 			);
 			path = "Sound Effects";
+			sourceTree = "<group>";
+		};
+		F3C7D854258D518200A9274A /* Old unused files */ = {
+			isa = PBXGroup;
+			children = (
+				9EEC6B5725701934009E1576 /* FlipView.swift */,
+				9EC18B08257558DC0060BA30 /* PappaMemo.swift */,
+				9EC18B0B257558ED0060BA30 /* MammaMemo.swift */,
+				9EEC6B5A25703200009E1576 /* BarnMemo.swift */,
+			);
+			name = "Old unused files";
+			path = "../Old unused files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3E949432588C98300A03784 /* MatchingCode.swift in Sources */,
+				F3E949432588C98300A03784 /* CardView.swift in Sources */,
+				F3C7D851258D4A9900A9274A /* GameController.swift in Sources */,
 				9EC18B0C257558ED0060BA30 /* MammaMemo.swift in Sources */,
 				9EEC6B5B25703200009E1576 /* BarnMemo.swift in Sources */,
-				F3A6DE81256D0B2D009E6C36 /* ContentView.swift in Sources */,
+				F3A6DE81256D0B2D009E6C36 /* GameView.swift in Sources */,
 				9EEC6B5825701934009E1576 /* FlipView.swift in Sources */,
 				9EC18B04257557F10060BA30 /* HomeView.swift in Sources */,
 				9EC18B09257558DC0060BA30 /* PappaMemo.swift in Sources */,
