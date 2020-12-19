@@ -56,17 +56,17 @@ struct GameView: View {
     
     func userTapHandler(id: Int) {
         
-        if game.isItFirstCard {        // если перевернули первую карту для сравнения
-            game.compareCards(id: id)  // то задержка и блокировка поля не нужны
+        if game.isItFirstCard {
+            game.compareCards(id: id)  // no delay if it was a first card
             return
         }
         
-        isDisabled = true    // блокируем всё поле на время сравнения карт
-        // нужна задержка до сравнения, иначе карты мгновненно переворачиваются обратно
+        isDisabled = true    // activities blocked while cards are compaired
+        // little delay to see both unmatched cards - can be longer
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
             game.compareCards(id: id)
             isDisabled = false
-            youWin = game.isGameOver  // проверяем на окончание игры
+            youWin = game.isGameOver  // check if the game is over
         }
     }
     
