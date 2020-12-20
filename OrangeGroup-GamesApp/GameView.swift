@@ -22,10 +22,13 @@ struct GameView: View {
             VStack {
                 LazyVGrid(columns: layoutGameView, spacing: 20) {
                     ForEach(0..<game.values.count, id: \.self) {number in
-                        let front = Image(systemName: "star")
+                        let front = Image(systemName: "heart.fill")
                             .resizable()
-                            .foregroundColor(.init(red: 213/255, green: 196/255, blue: 218/255))
+                            .padding(30)
+                            .foregroundColor(.init(red: 255/255, green: 255/255, blue: 255/255))
                             .background(Color.init(red: 255/255, green: 255/255, blue: 255/255, opacity: 1.0))
+                            .shadow(color: .purple, radius: 10, x: 0.0, y: 0.0)
+
                         
                         let back = Image(game.values[number]).resizable()
                         CardView(id: number,
