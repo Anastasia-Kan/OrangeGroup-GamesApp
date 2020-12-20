@@ -11,6 +11,7 @@ class GameController: ObservableObject {
     @Published var values: [String] = []      // array of all cards
     @Published var isCardFaceUp: [Bool] = []
     @Published var isCardGuessed: [Bool] = []
+    var backSideImageName = "star"
     private var firstCardIndex = -1           // saving index of the first turned card (default value -1 surely out of range)
     var isItFirstCard: Bool {
         return firstCardIndex == -1
@@ -22,14 +23,16 @@ class GameController: ObservableObject {
         // TODO: any effect when game is over
         
     }
-
-    init(_ uniqueValueArray: [String]) {
+    
+    init(_ uniqueValueArray: [String], _ backSideImageName: String = "star") {
         values.append(contentsOf: uniqueValueArray)
         values.append(contentsOf: uniqueValueArray)
         values.shuffle()
         
         isCardFaceUp = Array(repeating: false, count: values.count)
         isCardGuessed = Array(repeating: false, count: values.count)
+        
+        self.backSideImageName = backSideImageName
     }
     
     func compareCards(id: Int) {

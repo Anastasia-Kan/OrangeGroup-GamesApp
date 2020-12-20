@@ -57,13 +57,13 @@ struct HomeView: View {
             }
             Group {
                 EmptyView().fullScreenCover(isPresented: $goToMamma) {
-                    GameView(game: GameController(["Mammaglad", "Mammaarg", "Mammaledsen"]))
+                    GameView(game: GameController(["Mammaglad", "Mammaarg", "Mammaledsen"], "sun.max"))
                 }
                 EmptyView().fullScreenCover(isPresented: $goToPappa) {
-                    GameView(game: GameController(["Pappaarg", "Pappaglad", "Pappaledsen"]))
+                    GameView(game: GameController(["Pappaarg", "Pappaglad", "Pappaledsen"], "star"))
                 }
                 EmptyView().fullScreenCover(isPresented: $goToPojke) {
-                    GameView(game: GameController(["Pojkeglad", "Pojkearg", "Pojkeledsen"]))
+                    GameView(game: GameController(["Pojkeglad", "Pojkearg", "Pojkeledsen"], "heart.fill"))
                 }
             } .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
         }
