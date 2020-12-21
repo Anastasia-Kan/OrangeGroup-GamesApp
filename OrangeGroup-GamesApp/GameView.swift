@@ -70,6 +70,8 @@ struct GameView: View {
             game.compareCards(id: id)
             isDisabled = false
             youWin = game.isGameOver  // check if the game is over
+            
+            //TODO: effect for Game Over
         }
     }
     

@@ -19,8 +19,7 @@ class GameController: ObservableObject {
     var isGameOver: Bool {                    // true if all pairs found
         let temp = isCardGuessed.reduce(0) { $0 + ($1 ? 1 : 0) }
         return temp == values.count
-        
-        // TODO: any effect when game is over
+
         
     }
     
@@ -44,6 +43,7 @@ class GameController: ObservableObject {
             // pairs found
             isCardGuessed[firstCardIndex] = true
             isCardGuessed[id] = true
+            //(EffectPlayer.shared.effectSound(effect: "FileNameForEffect")
             
             // TODO: sound effect/popping heart if pair found?
             
