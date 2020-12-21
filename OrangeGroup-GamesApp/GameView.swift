@@ -20,7 +20,6 @@ struct GameView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.init(red: 238/255, green: 11/255, blue: 11/255, opacity: 1.0), Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
-            
             VStack {
                 LazyVGrid(columns: layoutGameView, spacing: 20) {
                     ForEach(0..<game.values.count, id: \.self) {number in
@@ -48,25 +47,21 @@ struct GameView: View {
                 }.padding().disabled(isDisabled)
                 
                 HStack {
-                    
                     Spacer()
+                    
                     Image(systemName: isSoundOn ? "speaker.fill": "speaker.slash.fill")
                         .resizable()
                         .frame(width: 50, height: 50)
                         .foregroundColor(.white)
                         .onTapGesture(perform: {
-                            
                             if isSoundOn {
                                 isSoundOn = false
                             } else {
                                 isSoundOn = true
                             }
-                            
                         })
                         .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
                     Spacer()
-                    
-                    
                     
                     Image(systemName: "arrowshape.turn.up.left.fill")
                         .resizable()
@@ -78,7 +73,6 @@ struct GameView: View {
                         .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
                     Spacer()
                     
-                    
                     Image(systemName: "repeat")
                         .resizable()
                         .frame(width: 50, height: 50)
@@ -88,8 +82,8 @@ struct GameView: View {
                         })
                         .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
                     Spacer()
-                   
                 }
+                .padding()
             }
         
             VStack {
@@ -99,14 +93,9 @@ struct GameView: View {
                     .aspectRatio(contentMode: .fit)
                     .padding()
                     .foregroundColor(.red)
-                
-                
-                
             }
-            
             .opacity(game.foundMatch ? 1 : 0)
             .animation(.easeInOut(duration: 0.5))
-            
         }
     }
     
@@ -133,8 +122,10 @@ struct GameView: View {
     }
     
     private func CardSize() -> CGFloat {
+        let height = UIScreen.main.bounds.height
+        let width = UIScreen.main.bounds.width
         if horizontalSizeClass == .compact {
-            return 150
+            return min(width * 0.8/2, (height-225)/3)
         } else {
             return 250
         }

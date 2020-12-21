@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
     @State var goToMamma = false
     @State var goToPappa = false
     @State var goToPojke = false
@@ -24,10 +25,10 @@ struct HomeView: View {
                 VStack {    // Button Pojke
                     Image("Pojkeglad")
                         .resizable()
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .frame(width: 2/3*size(), height: 2/3*size(), alignment: .center)
                    
                 }
-                .frame(width: 150, height: 150, alignment: .center)
+                .frame(width: size(), height: size(), alignment: .center)
                 .onTapGesture(perform: {
                     goToPojke = true
                 }).modifier(ButtonModifier())
@@ -35,10 +36,10 @@ struct HomeView: View {
                 VStack {    // Button Pappa
                     Image("Pappaglad")
                         .resizable()
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .frame(width: 2/3*size(), height: 2/3*size(), alignment: .center)
                     
                 }
-                .frame(width: 150, height: 150, alignment: .center)
+                .frame(width: size(), height: size(), alignment: .center)
                 .onTapGesture(perform: {
                     goToPappa = true
                 }).modifier(ButtonModifier())
@@ -46,10 +47,10 @@ struct HomeView: View {
                 VStack {    // Button Mamma
                     Image("Mammaglad")
                         .resizable()
-                        .frame(width: 100, height: 100, alignment: .center)
+                        .frame(width: 2/3*size(), height: 2/3*size(), alignment: .center)
                    
                 }
-                .frame(width: 150, height: 150, alignment: .center)
+                .frame(width: size(), height: size(), alignment: .center)
                 .onTapGesture(perform: {
                     goToMamma = true
                 }).modifier(ButtonModifier())
@@ -68,6 +69,15 @@ struct HomeView: View {
             } .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
         }
     }
+    
+    func size() -> CGFloat {
+        let height = UIScreen.main.bounds.height
+        if horizontalSizeClass == .compact {
+            return min(150, (height-180)/3)
+        } else {
+            return 250
+        }
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {
@@ -75,6 +85,7 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
+
 
 struct ButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
