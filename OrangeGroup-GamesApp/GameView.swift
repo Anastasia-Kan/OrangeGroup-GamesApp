@@ -45,14 +45,43 @@ struct GameView: View {
                     
                 }.padding()
                 
-                Image(systemName: "arrowshape.turn.up.left.fill")
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.white)
-                    .onTapGesture(perform: {
-                        presentationMode.wrappedValue.dismiss()
-                    })
-                    .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
+                HStack {
+                    
+                    Spacer()
+                    Image(systemName: /*isSoundOn?, "speaker.fill",:*/ "speaker.slash.fill")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.white)
+                        .onTapGesture(perform: {
+                            game.soundOnOff()
+                        })
+                        .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
+                    Spacer()
+                    
+                    
+                    
+                    Image(systemName: "arrowshape.turn.up.left.fill")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.white)
+                        .onTapGesture(perform: {
+                            presentationMode.wrappedValue.dismiss()
+                        })
+                        .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
+                    Spacer()
+                    
+                    
+                    Image(systemName: "repeat")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.white)
+                        .onTapGesture(perform: {
+                            game.reset()
+                        })
+                        .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
+                    Spacer()
+                   
+                }
             }
         }
     }

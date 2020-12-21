@@ -77,6 +77,7 @@
 		969BB65453DCD9A1E31F1D04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3A6DE82256D0B32009E6C36 /* Assets.xcassets */,
 				9D2E221CF2873678E9FA50A1 /* Pods_OrangeGroup_GamesApp.framework */,
 			);
 			name = Frameworks;
@@ -123,7 +124,6 @@
 				F3A6DE7C256D0B2D009E6C36 /* Products */,
 				F3A6DE87256D0B32009E6C36 /* Info.plist */,
 				9E225B3C258A14F100BF2D58 /* GoogleService-Info.plist */,
-				F3A6DE82256D0B32009E6C36 /* Assets.xcassets */,
 				F3A6DE84256D0B32009E6C36 /* Preview Content */,
 			);
 			path = "OrangeGroup-GamesApp";

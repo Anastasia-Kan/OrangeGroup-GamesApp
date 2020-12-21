@@ -11,6 +11,9 @@ class GameController: ObservableObject {
     @Published var values: [String] = []      // array of all cards
     @Published var isCardFaceUp: [Bool] = []
     @Published var isCardGuessed: [Bool] = []
+    @Published var isSoundOn: Bool = true
+    
+    
     var backSideImageName = "star"
     private var firstCardIndex = -1           // saving index of the first turned card (default value -1 surely out of range)
     var isItFirstCard: Bool {
@@ -60,6 +63,16 @@ class GameController: ObservableObject {
         isCardFaceUp = Array(repeating: false, count: values.count)
         isCardGuessed = Array(repeating: false, count: values.count)
         firstCardIndex = -1
+    }
+    
+    func soundOnOff() {
+        
+        if isSoundOn {
+            isSoundOn = false
+        } else {
+            isSoundOn = true
+        }
+        
     }
 }
 
