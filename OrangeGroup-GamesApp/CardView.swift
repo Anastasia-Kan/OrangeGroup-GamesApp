@@ -43,7 +43,13 @@ struct CardView<Front: View, Back: View>:View {
                 self.angleState = currentState
             }
             if !angleState.showingFront {
-                EffectPlayer.shared.effectSound(effect: sound)
+                if let soundOn = UserDefaults.standard.object(forKey: "isSoundOn") {
+                    if soundOn as! Bool {
+                        EffectPlayer.shared.effectSound(effect: sound)
+                    }
+                } else {
+                    EffectPlayer.shared.effectSound(effect: sound)
+                }
             }
         })
     }

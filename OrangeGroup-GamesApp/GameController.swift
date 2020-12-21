@@ -11,7 +11,11 @@ class GameController: ObservableObject {
     @Published var values: [String] = []      // array of all cards
     @Published var isCardFaceUp: [Bool] = []
     @Published var isCardGuessed: [Bool] = []
-    @Published var isSoundOn: Bool = true
+    @Published var isSoundOn: Bool {
+        didSet{
+            UserDefaults.standard.set(isSoundOn, forKey: "isSoundOn")
+        }
+    }
     
     @Published var foundMatch: Bool = false
     
@@ -28,6 +32,7 @@ class GameController: ObservableObject {
     }
     
     init(_ uniqueValueArray: [String], _ backSideImageName: String) {
+        isSoundOn = UserDefaults.standard.object(forKey: "isSoundOn") as? Bool ?? true
         values.append(contentsOf: uniqueValueArray)
         values.append(contentsOf: uniqueValueArray)
         values.shuffle()

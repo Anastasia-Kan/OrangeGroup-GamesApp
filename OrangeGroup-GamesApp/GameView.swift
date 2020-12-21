@@ -49,16 +49,12 @@ struct GameView: View {
                 HStack {
                     Spacer()
                     
-                    Image(systemName: isSoundOn ? "speaker.fill": "speaker.slash.fill")
+                    Image(systemName: game.isSoundOn ? "speaker.fill": "speaker.slash.fill")
                         .resizable()
                         .frame(width: 50, height: 50)
                         .foregroundColor(.white)
                         .onTapGesture(perform: {
-                            if isSoundOn {
-                                isSoundOn = false
-                            } else {
-                                isSoundOn = true
-                            }
+                            game.isSoundOn = !game.isSoundOn
                         })
                         .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
                     Spacer()
