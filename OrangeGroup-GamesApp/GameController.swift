@@ -13,8 +13,9 @@ class GameController: ObservableObject {
     @Published var isCardGuessed: [Bool] = []
     @Published var isSoundOn: Bool = true
     
+    @Published var foundMatch: Bool = false
     
-    var backSideImageName = "star"
+    var backSideImageName = ""
     private var firstCardIndex = -1           // saving index of the first turned card (default value -1 surely out of range)
     var isItFirstCard: Bool {
         return firstCardIndex == -1
@@ -26,7 +27,7 @@ class GameController: ObservableObject {
         
     }
     
-    init(_ uniqueValueArray: [String], _ backSideImageName: String = "star") {
+    init(_ uniqueValueArray: [String], _ backSideImageName: String) {
         values.append(contentsOf: uniqueValueArray)
         values.append(contentsOf: uniqueValueArray)
         values.shuffle()
@@ -46,6 +47,10 @@ class GameController: ObservableObject {
             // pairs found
             isCardGuessed[firstCardIndex] = true
             isCardGuessed[id] = true
+            foundMatch = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.foundMatch = false
+            }
             //(EffectPlayer.shared.effectSound(effect: "FileNameForEffect")
             
             // TODO: sound effect/popping heart if pair found?

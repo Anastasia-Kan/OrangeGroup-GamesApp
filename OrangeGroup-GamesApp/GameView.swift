@@ -14,11 +14,13 @@ struct GameView: View {
     let layoutGameView = [ GridItem(.flexible()), GridItem(.flexible()) ]
     @State private var isDisabled = false
     @State private var youWin = false
+    @State var isSoundOn: Bool = false
     
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.init(red: 238/255, green: 11/255, blue: 11/255, opacity: 1.0), Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
+            
             VStack {
                 LazyVGrid(columns: layoutGameView, spacing: 20) {
                     ForEach(0..<game.values.count, id: \.self) {number in
@@ -43,17 +45,23 @@ struct GameView: View {
                     }
                     .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
                     
-                }.padding()
+                }.padding().disabled(isDisabled)
                 
                 HStack {
                     
                     Spacer()
-                    Image(systemName: /*isSoundOn?, "speaker.fill",:*/ "speaker.slash.fill")
+                    Image(systemName: isSoundOn ? "speaker.fill": "speaker.slash.fill")
                         .resizable()
                         .frame(width: 50, height: 50)
                         .foregroundColor(.white)
                         .onTapGesture(perform: {
-                            game.soundOnOff()
+                            
+                            if isSoundOn {
+                                isSoundOn = false
+                            } else {
+                                isSoundOn = true
+                            }
+                            
                         })
                         .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
                     Spacer()
@@ -83,6 +91,14 @@ struct GameView: View {
                    
                 }
             }
+            
+            VStack {
+                Text("ABC")
+            }.frame(width: 200, height: 200)
+            .background(Color.blue)
+            .opacity(game.foundMatch ? 1 : 0)
+            .animation(.easeInOut(duration: 0.5))
+            
         }
     }
     
