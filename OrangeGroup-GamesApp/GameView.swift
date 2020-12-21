@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var game: GameController
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
     @Environment(\.presentationMode) var presentationMode
     let layoutGameView = [ GridItem(.flexible()), GridItem(.flexible()) ]
     @State private var isDisabled = false
@@ -18,7 +19,6 @@ struct GameView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.init(red: 238/255, green: 11/255, blue: 11/255, opacity: 1.0), Color.init(red: 122/255, green: 36/255, blue: 225/255, opacity: 1.0)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
-            
             VStack {
                 LazyVGrid(columns: layoutGameView, spacing: 20) {
                     ForEach(0..<game.values.count, id: \.self) {number in
@@ -38,7 +38,7 @@ struct GameView: View {
                                  sound: getSound(number: number),
                                  front: front,
                                  back: back)
-                            .frame(width: 150, height: 150)
+                            .frame(width: CardSize(), height: CardSize())
                             .cornerRadius(15)
                     }
                     .shadow(color: .black, radius: 10, x: 5.0, y: 8.0)
@@ -106,6 +106,14 @@ struct GameView: View {
     
     private func sizeGameView() -> CGFloat {
         return UIScreen.main.bounds.width/3
+    }
+    
+    private func CardSize() -> CGFloat {
+        if horizontalSizeClass == .compact {
+            return 150
+        } else {
+            return 250
+        }
     }
     
     private func getSound(number: Int) -> String {
