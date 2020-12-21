@@ -91,11 +91,19 @@ struct GameView: View {
                    
                 }
             }
-            
+        
             VStack {
-                Text("ABC")
-            }.frame(width: 200, height: 200)
-            .background(Color.blue)
+                
+                Image(systemName: "heart.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+                    .foregroundColor(.red)
+                
+                
+                
+            }
+            
             .opacity(game.foundMatch ? 1 : 0)
             .animation(.easeInOut(duration: 0.5))
             
