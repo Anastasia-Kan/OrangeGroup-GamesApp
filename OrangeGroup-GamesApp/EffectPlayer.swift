@@ -2,7 +2,7 @@
 //  EffectPlayer.swift
 //  OrangeGroup-GamesApp
 //
-//  Created by Pontus Ohlsson on 2020-12-13.
+//  Created by Rasmus Ohlsson on 2020-12-13.
 //
 
 import Foundation

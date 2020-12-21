@@ -66,7 +66,7 @@ struct GameView: View {
         
         isDisabled = true    // activities blocked while cards are compaired
         // little delay to see both unmatched cards - can be longer
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             game.compareCards(id: id)
             isDisabled = false
             youWin = game.isGameOver  // check if the game is over

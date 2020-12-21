@@ -25,7 +25,7 @@ struct HomeView: View {
                     Image("Pojkeglad")
                         .resizable()
                         .frame(width: 100, height: 100, alignment: .center)
-                    Text("Barn Memo")
+                   
                 }
                 .frame(width: 150, height: 150, alignment: .center)
                 .onTapGesture(perform: {
@@ -36,7 +36,7 @@ struct HomeView: View {
                     Image("Pappaglad")
                         .resizable()
                         .frame(width: 100, height: 100, alignment: .center)
-                    Text("Pappa Memo")
+                    
                 }
                 .frame(width: 150, height: 150, alignment: .center)
                 .onTapGesture(perform: {
@@ -47,7 +47,7 @@ struct HomeView: View {
                     Image("Mammaglad")
                         .resizable()
                         .frame(width: 100, height: 100, alignment: .center)
-                    Text("Mamma Memo")
+                   
                 }
                 .frame(width: 150, height: 150, alignment: .center)
                 .onTapGesture(perform: {
