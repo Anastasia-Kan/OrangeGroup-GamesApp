@@ -18,6 +18,7 @@
 		7BFF693625868F36000F84D5 /* EffectPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFF693525868F36000F84D5 /* EffectPlayer.swift */; };
 		9E225B3D258A14F100BF2D58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E225B3C258A14F100BF2D58 /* GoogleService-Info.plist */; };
 		9EC18B04257557F10060BA30 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC18B03257557F10060BA30 /* HomeView.swift */; };
+		A994382F2591FE2F004B282A /* WinSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A994382E2591FE2F004B282A /* WinSound.wav */; };
 		F3A6DE7F256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6DE7E256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift */; };
 		F3A6DE81256D0B2D009E6C36 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A6DE80256D0B2D009E6C36 /* GameView.swift */; };
 		F3A6DE83256D0B32009E6C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3A6DE82256D0B32009E6C36 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		9D2E221CF2873678E9FA50A1 /* Pods_OrangeGroup_GamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrangeGroup_GamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E225B3C258A14F100BF2D58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9EC18B03257557F10060BA30 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A994382E2591FE2F004B282A /* WinSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WinSound.wav; sourceTree = "<group>"; };
 		B0EA36D6D13E6A0C53874F7B /* Pods-OrangeGroup-GamesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrangeGroup-GamesApp.release.xcconfig"; path = "Target Support Files/Pods-OrangeGroup-GamesApp/Pods-OrangeGroup-GamesApp.release.xcconfig"; sourceTree = "<group>"; };
 		F3A6DE7B256D0B2D009E6C36 /* OrangeGroup-GamesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OrangeGroup-GamesApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A6DE7E256D0B2D009E6C36 /* OrangeGroup_GamesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeGroup_GamesAppApp.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				7B49150A2587F55F00BDAC93 /* Woman-cry.wav */,
 				7B4915032587D7C800BDAC93 /* Woman-angry.wav */,
 				7B4915062587D80D00BDAC93 /* Woman-laugh.wav */,
+				A994382E2591FE2F004B282A /* WinSound.wav */,
 			);
 			path = "Sound Effects";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A994382F2591FE2F004B282A /* WinSound.wav in Resources */,
 				7B4915042587D7C800BDAC93 /* Woman-angry.wav in Resources */,
 				F3BD24E325838AE1003147D2 /* Kid-laugh.wav in Resources */,
 				F3A6DE86256D0B32009E6C36 /* Preview Assets.xcassets in Resources */,

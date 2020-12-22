@@ -56,7 +56,7 @@ class GameController: ObservableObject {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.foundMatch = false
             }
-            //(EffectPlayer.shared.effectSound(effect: "FileNameForEffect")
+         (EffectPlayer.shared.effectSound(effect: "WinSound"))
             
             // TODO: sound effect/popping heart if pair found?
             
