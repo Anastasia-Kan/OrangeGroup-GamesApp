@@ -84,14 +84,15 @@ struct GameView: View {
         
             VStack {
                 
-                Image(systemName: "heart.fill")
+                Image("PojkeWin")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .padding()
-                    .foregroundColor(.red)
+                    
+                    
+                    
             }
             .opacity(game.foundMatch ? 1 : 0)
-            .animation(.easeInOut(duration: 0.5))
+            .animation(.easeInOut(duration: 0.9))
         }
     }
     
