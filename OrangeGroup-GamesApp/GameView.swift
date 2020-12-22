@@ -109,7 +109,18 @@ struct GameView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             game.compareCards(id: id)
             isDisabled = false
-            youWin = game.isGameOver  // check if the game is over
+            youWin = game.isGameOver
+            
+            if youWin {
+                if let soundOn = UserDefaults.standard.object(forKey: "isSoundOn") {
+                    if soundOn as! Bool {
+                        EffectPlayer.shared.effectSound(effect: "WinSound")
+                    }
+                } else {
+                    EffectPlayer.shared.effectSound(effect: "WinSound")
+                }
+            }
+            // check if the game is over
             
             //TODO: effect for Game Over
         }
