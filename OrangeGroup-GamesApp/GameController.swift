@@ -56,7 +56,14 @@ class GameController: ObservableObject {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.foundMatch = false
             }
-         (EffectPlayer.shared.effectSound(effect: "WinSound"))
+            if let soundOn = UserDefaults.standard.object(forKey: "isSoundOn") {
+                if soundOn as! Bool {
+                    EffectPlayer.shared.effectSound(effect: "WinSound")
+                }
+            } else {
+                EffectPlayer.shared.effectSound(effect: "WinSound")
+            }
+            
             
             // TODO: sound effect/popping heart if pair found?
             

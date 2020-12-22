@@ -92,7 +92,8 @@ struct GameView: View {
                     
             }
             .opacity(game.foundMatch ? 1 : 0)
-            .animation(.easeInOut(duration: 0.9))
+            .frame(width: game.foundMatch ? UIScreen.main.bounds.width : 0, height: game.foundMatch ? UIScreen.main.bounds.height : 0)
+            .animation(.easeInOut(duration: 0.5))
         }
     }
     
